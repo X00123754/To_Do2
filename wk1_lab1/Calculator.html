@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script>
+		function Calculate(operation) {
+
+            var number1 = document.getElementById('number1').value;
+			var number2 = document.getElementById('number2').value;
+
+            if (operation == 'add') {
+                alert(Number(number1)+Number(number2));
+            }
+            else if (operation == 'subtract') {
+                alert(number1-number2);
+            }
+            return true;
+		}
+	</script>
+</head>
+<body>
+    <p>
+        <input id="number1" type="text" size="10" maxlength="10">
+        <input id="number2" type="text" size="10" maxlength="10">
+    </p>
+    <p>
+        <a href="#" onclick="return Calculate('add');">Add</a>
+        <a href="#" onclick="return Calculate('subtract');">Subtract</a>
+    </p>
+</body>
+</html>
